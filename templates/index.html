@@ -1,0 +1,442 @@
+<!doctype html>
+<html>
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&display=swap" rel="stylesheet">
+    <style>
+
+        .header-banner img {
+            height: 75px;
+        }
+
+        .header-text {
+            flex-grow: 1;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        .about-section {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-align: center;
+            background-color: #f5f5dc;
+            padding: 20px;
+        }
+
+.enhanced-header {
+    background: linear-gradient(to right, #fff9e6, #fdf6dd);
+    border: 4px solid #ffd700;
+    border-radius: 15px;
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    border-radius: 15px;
+    margin-top: calc(1.5em - 5px);
+}
+
+.enhanced-header img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
+
+.enhanced-title {
+    font-family: 'Cinzel Decorative', cursive;
+    font-size: 2.8em;
+    color: #8b3a00;
+    text-shadow: 1px 1px 2px #b87800;
+}
+
+<!--@media (max-width: 768px) {-->
+<!--    .enhanced-header {-->
+<!--        flex-direction: column;-->
+<!--        gap: 50px;-->
+<!--    }-->
+    .enhanced-title {
+        font-size: 2em;
+        text-align: center;
+    }
+}
+
+        .about-logo {
+            height: 100px;
+            margin-bottom: 10px;
+        }
+
+        .events-section {
+            background-color: #fffef0;
+            border-top: 4px solid goldenrod;
+            border-bottom: 4px solid goldenrod;
+            margin-top: 12px;
+            padding: 40px;
+            text-align: center;
+            font-family: Arial, sans-serif;
+            color: #333;
+        }
+
+        .events-section h2 {
+            font-size: 32px;
+            margin-bottom: 12px;
+            color: #6b4e16;
+        }
+
+        .past-events .gallery {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-bottom: 12px;
+        }
+
+        .event-img {
+            width: 200px;
+        }
+
+        .events-section img {
+            width: 200px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        .upcoming-events ul {
+            list-style-type: none;
+            padding: 0;
+            font-size: 18px;
+        }
+
+        .upcoming-events li {
+            margin-bottom: 15px;
+        }
+
+        .join-team-section {
+            background-color: #fff8dc;
+            border-top: 4px solid goldenrod;
+            border-bottom: 4px solid goldenrod;
+            text-align: center;
+            padding: 40px 20px;
+            font-family: Arial, sans-serif;
+            color: #2d572c;
+        }
+
+        .join-team-section h2 {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+
+        .join-team-section p {
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+
+        .join-btn {
+            display: inline-block;
+            background-color: #25D366;
+            color: white;
+            padding: 12px 24px;
+            text-decoration: none;
+            border-radius: 8px;
+            font-size: 20px;
+            transition: background-color 0.3s ease;
+        }
+
+        .join-btn:hover {
+           background-color: #1da851;
+           transform: scale(1.05);
+           box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
+
+
+        .donate-section {
+            background-color: #fff8dc;
+            border-top: 4px solid goldenrod;
+            border-bottom: 4px solid goldenrod;
+            padding: 40px 20px;
+            text-align: center;
+            font-family: Arial, sans-serif;
+            color: #5a3e1b;
+            margin-bottom: 12px
+         }
+
+.donate-section h2 {
+    font-size: 32px;
+    margin-bottom: 16px;
+}
+
+.donate-section p {
+    font-size: 18px;
+    max-width: 700px;
+    margin: 0 auto 24px;
+}
+
+.donate-btn {
+    display: inline-block;
+    background-color: #ff9933;
+    color: white;
+    padding: 14px 28px;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 22px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.donate-btn:hover {
+    background-color: #e88a29;
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+        /* NEW GRID SECTION */
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); /* exactly 3 per row */
+            gap: 28px;
+            margin: 40px 20px;
+        }
+
+
+        .info-card {
+            position: relative;
+            height: 200px;
+            background-size: cover;
+            background-position: center;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+
+        .info-card:hover {
+            transform: scale(1.09);
+        }
+
+        .info-card span {
+            position: absolute;
+            bottom: 15px;
+            left: 20px;
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+            text-shadow: 1px 1px 5px rgba(0,0,0,0.8);
+        }
+
+        .learn-more-btn {
+            display: inline-block;
+            padding: 12px 24px;
+            background-color: gray;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+        }
+
+        .learn-more-btn:hover {
+            background-color: #4f4f4f;
+            transform: scale(1.05);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+        }
+
+        .top-banner {
+            background-color: #8b3a00;
+            color: white;
+            padding: 12px 20px;
+            text-align: right;
+            font-family: Arial, sans-serif;
+            font-size: 16px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .top-banner a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        .top-banner a:hover {
+            color: #ffd700;
+        }
+
+
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+<!--    <div class="header-banner">-->
+<!--        <img src="{{ url_for('static', filename='om.jpeg') }}" alt="Left Logo">-->
+<!--        <div class="header-text">Ashford Dharmic & Cultural Society</div>-->
+<!--        <img src="{{ url_for('static', filename='om.jpeg') }}" alt="Right Logo">-->
+<!--    </div>-->
+
+    <div class="top-banner">
+    <a href="{{ url_for('about') }}">About Us</a>
+    <a href="https://chat.whatsapp.com/I5bnAY4xNNo3qEHn8IX6Av">Follow</a>
+    <a href="https://chat.whatsapp.com/I5bnAY4xNNo3qEHn8IX6Av">Donate</a>
+    <a href="{{ url_for('contact') }}">Contact Us</a>
+    </div>
+
+
+    <!-- Enhanced Header -->
+<div class="enhanced-header">
+    <img src="{{ url_for('static', filename='om.jpeg') }}" alt="Left Logo">
+    <div class="enhanced-title">Ashford Dharmic & Cultural Society</div>
+    <img src="{{ url_for('static', filename='om.jpeg') }}" alt="Right Logo">
+</div>
+
+
+
+    <!-- GRID SECTION -->
+    <div class="info-grid">
+        <a href="{{ url_for('about') }}" class="info-card" style="background-image: url('{{ url_for('static', filename='logo.jpg') }}');">
+            <span>About Us</span>
+        </a>
+        <a href="{{ url_for('past_events') }}" class="info-card" style="background-image: url('{{ url_for('static', filename='adcs3.jpg') }}');">
+            <span>Past Events</span>
+        </a>
+        <a href="{{ url_for('contact') }}" class="info-card" style="background-image: url('{{ url_for('static', filename='adcs0.jpg') }}');">
+            <span>Contact Us</span>
+        </a>
+        <a href="{{ url_for('upcoming_events') }}" class="info-card" style="background-image: url('{{ url_for('static', filename='adcs1.jpg') }}');">
+            <span>Upcoming Events</span>
+        </a>
+        <a href="{{ url_for('services') }}" class="info-card" style="background-image: url('{{ url_for('static', filename='services.jpg') }}');">
+            <span>Our Services</span>
+        </a>
+        <a href="{{ url_for('mission') }}" class="info-card" style="background-image: url('{{ url_for('static', filename='mission.jpg') }}');">
+            <span>Our Vision</span>
+        </a>
+    </div>
+
+
+    <!-- History Section -->
+<div class="history-section" style="display: flex; flex-wrap: wrap; align-items: center; justify-content: center; background-color: #d0d0d0; border-radius: 20px; margin: 40px 20px; padding: 30px;">
+    <div style="flex: 1; min-width: 280px; padding: 10px;">
+        <img src="{{ url_for('static', filename='logobw.jpg') }}" alt="History Image" style="width: 70%; border-radius: 15px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+    </div>
+    <div style="flex: 1; min-width: 280px;padding: 10px; gap: 10px;">
+        <h2 style="font-size: 50px; color: #2c2c2c; margin-bottom: 16px;">History Of The Society</h2>
+        <p style="font-size: 25px; color: #333; margin-bottom: 20px;">
+            Take a journey into the past and see how the foundations were laid. Discover the inspiring efforts that built a strong cultural and spiritual foundation in Ashford.
+        </p>
+        <a href="/about" class="learn-more-btn" style="display: inline-block; padding: 12px 24px; background-color: gray; color: white; text-decoration: none; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+            Learn More
+        </a>
+    </div>
+</div>
+
+
+<!-- Join Section -->
+<div style="margin: 40px 20px;">
+  <div class="join-team-section" style="border-radius: 20px;">
+      <h2>Join Our Team</h2>
+      <p>Stay connected, get updates, and be part of our cultural journey!</p>
+      <a class="join-btn" href="https://chat.whatsapp.com/I5bnAY4xNNo3qEHn8IX6Av" target="_blank">
+          Join WhatsApp Group
+      </a>
+  </div>
+</div>
+
+
+
+<!--&lt;!&ndash; YouTube Subscribe Section &ndash;&gt;-->
+<!--<div style="text-align: center; padding: 40px 20px; font-family: Arial, sans-serif;">-->
+<!--    <h2 style="font-size: 38px; color: #cc0000; margin-bottom: 10px;">Subscribe to Our YouTube Channel</h2>-->
+<!--    <p style="font-size: 20px; color: #333;">Stay tuned with our latest cultural and spiritual videos!</p>-->
+
+<!--    &lt;!&ndash; YouTube Subscribe Button &ndash;&gt;-->
+<!--    <a href="https://www.youtube.com/@AshfordDharmikandCulturalSocie" target="_blank" style="display: inline-block; margin: 20px 0;">-->
+<!--        <img src="{{ url_for('static', filename='subscribe.jpg') }}" alt="YouTube" style="height: 120px;">-->
+<!--    </a>-->
+
+<!--    &lt;!&ndash; Gallery of YouTube Thumbnails &ndash;&gt;-->
+<!--    <div style="display: flex; justify-content: center; flex-wrap: wrap; gap: 15px; margin-top: 20px;">-->
+<!--        <a href="https://www.youtube.com/watch?v=oOhGJqpTqOg" target="_blank" style="display: inline-block; margin: 20px 0;">-->
+<!--        <img src="{{ url_for('static', filename='yt1.png') }}" alt="YouTube" style="width: 250px;">-->
+<!--        </a>-->
+<!--        <a href="https://www.youtube.com/watch?v=oOhGJqpTqOg" target="_blank" style="display: inline-block; margin: 20px 0;">-->
+<!--        <img src="{{ url_for('static', filename='yt1.png') }}" alt="YouTube" style="width: 250px;">-->
+<!--        </a>-->
+<!--        <a href="https://www.youtube.com/watch?v=oOhGJqpTqOg" target="_blank" style="display: inline-block; margin: 20px 0;">-->
+<!--        <img src="{{ url_for('static', filename='yt1.png') }}" alt="YouTube" style="width: 250px;">-->
+<!--        </a>-->
+<!--    </div>-->
+<!--</div>-->
+
+    <!-- Social Media Section -->
+<div style="margin: 50px 20px; background-color: #fffef0; border: 4px solid goldenrod; border-radius: 20px; padding: 40px 20px; text-align: center; font-family: Arial, sans-serif; color: #333;">
+  <h2 style="font-size: 42px; color: #8b3a00; margin-bottom: 30px;">Follow Our Socials</h2>
+
+  <!-- YouTube -->
+  <div style="margin-bottom: 40px;">
+    <h3 style="font-size: 27px; color: #cc0000;">YouTube</h3>
+    <p>Subscribe to our channel for live event highlights.</p>
+    <a href="https://www.youtube.com/@AshfordDharmikandCulturalSocie" target="_blank">
+      <img src="{{ url_for('static', filename='subscribe.png') }}" alt="Subscribe on YouTube" style="height: 48px; margin: 10px;">
+    </a>
+    <div style="display: flex; justify-content: center; flex-wrap: wrap; gap: 20px; margin-top: 15px;">
+        <a href="https://www.youtube.com/watch?v=oOhGJqpTqOg" target="_blank">
+      <img src="{{ url_for('static', filename='yt1.png') }}" style="width: 220px; border-radius: 10px;">
+      <img src="{{ url_for('static', filename='yt1.png') }}" style="width: 220px; border-radius: 10px;">
+      <img src="{{ url_for('static', filename='yt1.png') }}" style="width: 220px; border-radius: 10px;">
+        </a>
+    </div>
+  </div>
+
+  <!-- Facebook -->
+  <div style="margin-bottom: 40px;">
+    <h3 style="font-size: 27px; color: #3b5998;">Facebook</h3>
+    <p>Follow us on Facebook for live updates and event photos.</p>
+    <a href="https://www.facebook.com/share/g/16YXyoGDzb/?mibextid=wwXIfr" target="_blank">
+      <img src="{{ url_for('static', filename='fbfollow.png') }}" alt="Follow on Facebook" style="height: 80px; margin: 10px;">
+    </a>
+    <div style="display: flex; justify-content: center; flex-wrap: wrap; gap: 15px; margin-top: 15px;">
+      <img src="{{ url_for('static', filename='fb1.jpg') }}" style="width: 200px; border-radius: 10px;">
+      <img src="{{ url_for('static', filename='fb2.jpg') }}" style="width: 200px; border-radius: 10px;">
+    </div>
+  </div>
+
+  <!-- Instagram -->
+  <div>
+    <h3 style="font-size: 27px; color: #e1306c;">Instagram</h3>
+    <p>Catch glimpses of our events and behind-the-scenes moments.</p>
+    <a href="https://www.instagram.com/adcs.kent?igsh=MW1xaWlmMnNwbWR5NA==" target="_blank">
+      <img src="{{ url_for('static', filename='follow.jpeg') }}" alt="Follow on Instagram" style="height: 60px; margin: 10px;">
+    </a>
+    <div style="display: flex; justify-content: center; flex-wrap: wrap; gap: 15px; margin-top: 15px;">
+        <a href="https://www.instagram.com/adcs.kent/reel/C4EPRNlL3g6/" target="_blank">
+      <img src="{{ url_for('static', filename='ig1.jpg') }}" style="width: 200px; border-radius: 10px;">
+        </a>
+        <a href="https://www.instagram.com/adcs.kent/reel/DAox-Fqo5fU/" target="_blank">
+      <img src="{{ url_for('static', filename='ig2.jpg') }}" style="width: 200px; border-radius: 10px;">
+        </a>
+    </div>
+  </div>
+</div>
+
+
+<!-- Donate Section -->
+<div style="margin: 40px 20px;">
+  <div class="donate-section" style="background-color: #fff8dc; border-top: 4px solid goldenrod; border-bottom: 4px solid goldenrod; padding: 40px 20px; text-align: center; font-family: Arial, sans-serif; color: #5a3e1b; border-radius: 20px;">
+      <h2 style="font-size: 50px; margin-bottom: 16px;">Support Our Mission</h2>
+      <p style="font-size: 20px; max-width: 700px; margin: 0 auto 24px;">
+          Your generous donations help us organize spiritual events, community services, and maintain our cultural programs. Thank you for your support!🙏
+      </p>
+      <a class="donate-btn" href="https://chat.whatsapp.com/I5bnAY4xNNo3qEHn8IX6Av" target="_blank" style="background-color: #ff9933; font-weight: bold;">
+          💸 Donate Now
+      </a>
+  </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Us</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+      background: #fdfaf6;
+      color: #333;
+    }
+
+    .hero {
+      background: #e0d4b7;
+      text-align: center;
+      padding: 50px 20px;
+    }
+
+    .hero h1 {
+      font-size: 3em;
+      margin-bottom: 10px;
+    }
+
+    .hero p {
+      font-size: 1.2em;
+    }
+
+    section {
+      padding: 40px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .our-story {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+      flex-wrap: wrap;
+    }
+
+    .our-story-text {
+      flex: 1.5;
+    }
+
+    .our-story-logo {
+      flex: 1;
+      text-align: center;
+    }
+
+    .our-story-logo img {
+      max-width: 220px;
+      height: auto;
+    }
+
+    .mission-vision {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .card {
+      background: #fff;
+      padding: 20px;
+      flex: 1;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .team-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr); /* First row has 5 */
+      gap: 30px;
+      justify-items: center;
+    }
+
+
+    .member {
+      text-align: center;
+      width: 150px;
+    }
+
+  .member img {
+      width: 120px;
+      height: 120px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 3px solid #eee;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+      object-position: top center;
+    }
+
+
+    .cta {
+      text-align: center;
+      padding: 20px;
+    }
+
+    .cta a {
+      display: inline-block;
+      background: #b94700;
+      color: white;
+      padding: 10px 20px;
+      text-decoration: none;
+      border-radius: 5px;
+      margin: 10px;
+    }
+
+    .cta a:hover {
+      background: #944100;
+    }
+  </style>
+</head>
+<body>
+  <section class="hero">
+    <h1>About Us</h1>
+    <p>Bringing Community, Culture, and Spirituality Together</p>
+  </section>
+
+  <section class="our-story">
+    <div class="our-story-logo">
+      <img src="{{ url_for('static', filename='logo.jpg') }}" alt="Logo">
+    </div>
+    <div class="our-story-text">
+      <h2>Our Story</h2>
+      <p>ADCS was established by a group of Ashford residents 2021 who identified a gap in social engagement within our community. Recognising the importance of providing opportunities for our youth to showcase their talents and creating a secure environment for the elderly to engage in cultural events and activities, we embarked on this initiative.</p>
+    </div>
+  </section>
+
+  <section class="mission-vision">
+    <div class="card">
+      <h3>Our Mission</h3>
+      <p>Our aim was to foster inclusivity and unity within the local community by sharing our rich cultural diversity and nurturing a strong communal harmony. </p>
+    </div>
+    <div class="card">
+      <h3>Our Vision</h3>
+      <p> This endeavor was driven by the belief that uniting our community and embracing positivity and festive spirit throughout the year was essential</p>
+    </div>
+  </section>
+
+  <section class="team">
+  <h2 style="text-align: center;">Our Committee</h2>
+  <div class="team-grid">
+    <!-- Row 1: 5 members -->
+    <div class="member">
+      <img src="{{ url_for('static', filename='kapilUncle.jpg') }}" alt="">
+      <h4>Kapil Sharma</h4>
+      <p>Founder</p>
+    </div>
+    <div class="member">
+      <img src="{{ url_for('static', filename='jyotiAunty.jpg') }}" alt="">
+      <h4>Jyoti Sharma</h4>
+      <p>Founder</p>
+    </div>
+    <div class="member">
+      <img src="{{ url_for('static', filename='ruby.jpg') }}" alt="">
+      <h4>Ruby Khaira</h4>
+      <p>Role</p>
+    </div>
+    <div class="member">
+      <img src="{{ url_for('static', filename='shaveta.jpg') }}" alt="">
+      <h4>Dr. Shaveta Mulla</h4>
+      <p>Role</p>
+    </div>
+    <div class="member">
+      <img src="{{ url_for('static', filename='gurmeet.png') }}" alt="">
+      <h4>Gurmeet Singh</h4>
+      <p>Role</p>
+    </div>
+  </div>
+
+  <!-- Second row -->
+  <div class="team-grid" style="grid-template-columns: repeat(4, 1fr); margin-top: 30px;">
+    <div class="member">
+      <img src="{{ url_for('static', filename='neeru.jpg') }}" alt="">
+      <h4>Neeru Jain</h4>
+      <p>Role</p>
+    </div>
+    <div class="member">
+      <img src="{{ url_for('static', filename='parul.jpg') }}" alt="">
+      <h4>Parul Chhabra</h4>
+      <p>Role</p>
+    </div>
+    <div class="member">
+      <img src="{{ url_for('static', filename='person8.jpg') }}" alt="">
+      <h4>Sunanda Sharma</h4>
+      <p>Role</p>
+    </div>
+    <div class="member">
+      <img src="{{ url_for('static', filename='person9.jpg') }}" alt="">
+      <h4>Parul Vats</h4>
+      <p>Role</p>
+    </div>
+  </div>
+</section>
+
+
+  <section class="cta">
+    <h2>Get Involved</h2>
+    <a href="https://chat.whatsapp.com/I5bnAY4xNNo3qEHn8IX6Av">Join Us</a>
+    <a href="https://chat.whatsapp.com/I5bnAY4xNNo3qEHn8IX6Av">Donate</a>
+    <a href="/past-events">View Events</a>
+  </section>
+</body>
+</html>
