@@ -51,8 +51,41 @@
       margin-bottom: 10px;
     }
 
+     .top-banner {
+            background-color: #8b3a00;
+            color: white;
+            padding: 12px 20px;
+            text-align: right;
+            font-family: Arial, sans-serif;
+            font-size: 16px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            margin-bottom: 10px;
+        }
+
+       .top-banner a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+       .top-banner a:hover {
+            color: #ffd700;
+        }
+
   </style>
 </head>
+
+<div class="top-banner">
+    <a href="{{ url_for('about') }}">About Us</a>
+    <a href="https://chat.whatsapp.com/I5bnAY4xNNo3qEHn8IX6Av">Follow</a>
+    <a href="https://chat.whatsapp.com/I5bnAY4xNNo3qEHn8IX6Av">Donate</a>
+    <a href="{{ url_for('contact') }}">Contact Us</a>
+    </div>
+
 <body class="container">
 
   <div class="box">
