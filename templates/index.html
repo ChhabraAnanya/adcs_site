@@ -17,7 +17,7 @@
         .about-section {
             display: flex;
             align-items: center;
-            gap: 10px;
+            gap: 20px;
             text-align: center;
             background-color: #f5f5dc;
             padding: 20px;
@@ -35,7 +35,6 @@
     gap: 30px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     border-radius: 15px;
-    margin-top: calc(1.5em - 5px);
 }
 
 .enhanced-header img {
@@ -51,11 +50,11 @@
     text-shadow: 1px 1px 2px #b87800;
 }
 
-<!--@media (max-width: 768px) {-->
-<!--    .enhanced-header {-->
-<!--        flex-direction: column;-->
-<!--        gap: 50px;-->
-<!--    }-->
+@media (max-width: 768px) {
+    .enhanced-header {
+        flex-direction: column;
+        gap: 10px;
+    }
     .enhanced-title {
         font-size: 2em;
         text-align: center;
@@ -253,6 +252,7 @@
             position: sticky;
             top: 0;
             z-index: 1000;
+            margin-bottom: 10px;
         }
 
         .top-banner a {
@@ -266,6 +266,16 @@
         .top-banner a:hover {
             color: #ffd700;
         }
+
+        .social-follow-button {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .social-follow-button:hover {
+         transform: scale(1.1);
+         box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
+
 
 
     </style>
@@ -373,6 +383,18 @@
 <!--    </div>-->
 <!--</div>-->
 
+    <style>
+  .social-image-hover {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .social-image-hover:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  }
+    </style>
+
+
     <!-- Social Media Section -->
 <div style="margin: 50px 20px; background-color: #fffef0; border: 4px solid goldenrod; border-radius: 20px; padding: 40px 20px; text-align: center; font-family: Arial, sans-serif; color: #333;">
   <h2 style="font-size: 42px; color: #8b3a00; margin-bottom: 30px;">Follow Our Socials</h2>
@@ -382,43 +404,51 @@
     <h3 style="font-size: 27px; color: #cc0000;">YouTube</h3>
     <p>Subscribe to our channel for live event highlights.</p>
     <a href="https://www.youtube.com/@AshfordDharmikandCulturalSocie" target="_blank">
-      <img src="{{ url_for('static', filename='subscribe.png') }}" alt="Subscribe on YouTube" style="height: 48px; margin: 10px;">
+        <img src="{{ url_for('static', filename='subscribe.png') }}" class="social-image-hover" alt="Subscribe on YouTube" class="social-follow-button" style="height: 48px; margin: 10px;">
     </a>
+
     <div style="display: flex; justify-content: center; flex-wrap: wrap; gap: 20px; margin-top: 15px;">
         <a href="https://www.youtube.com/watch?v=oOhGJqpTqOg" target="_blank">
-      <img src="{{ url_for('static', filename='yt1.png') }}" style="width: 220px; border-radius: 10px;">
-      <img src="{{ url_for('static', filename='yt1.png') }}" style="width: 220px; border-radius: 10px;">
-      <img src="{{ url_for('static', filename='yt1.png') }}" style="width: 220px; border-radius: 10px;">
+      <img src="{{ url_for('static', filename='yt1.png') }}" class="social-image-hover" style="width: 220px; border-radius: 10px;">
+      <img src="{{ url_for('static', filename='yt1.png') }}" class="social-image-hover" style="width: 220px; border-radius: 10px;">
+      <img src="{{ url_for('static', filename='yt1.png') }}" class="social-image-hover" style="width: 220px; border-radius: 10px;">
         </a>
     </div>
   </div>
 
-  <!-- Facebook -->
-  <div style="margin-bottom: 40px;">
-    <h3 style="font-size: 27px; color: #3b5998;">Facebook</h3>
-    <p>Follow us on Facebook for live updates and event photos.</p>
-    <a href="https://www.facebook.com/share/g/16YXyoGDzb/?mibextid=wwXIfr" target="_blank">
-      <img src="{{ url_for('static', filename='fbfollow.png') }}" alt="Follow on Facebook" style="height: 80px; margin: 10px;">
+<!-- Facebook -->
+<div style="margin-bottom: 40px;">
+  <h3 style="font-size: 27px; color: #3b5998;">Facebook</h3>
+  <p>Follow us on Facebook for live updates and event photos.</p>
+  <a href="https://www.facebook.com/your-page-link" target="_blank">
+    <img src="{{ url_for('static', filename='fbfollow.png') }}" class="social-image-hover" alt="Follow on Facebook" style="height: 80px; margin: 10px;">
+  </a>
+  <div style="display: flex; justify-content: center; flex-wrap: wrap; gap: 20px; margin-top: 15px;">
+    <a href="https://www.facebook.com/share/p/1YfvDx2Ysu/?mibextid=wwXIfr" target="_blank">
+      <img src="{{ url_for('static', filename='fb1.jpg') }}" class="social-image-hover" style="width: 260px; height: 330px; object-fit: cover; border-radius: 10px;">
     </a>
-    <div style="display: flex; justify-content: center; flex-wrap: wrap; gap: 15px; margin-top: 15px;">
-      <img src="{{ url_for('static', filename='fb1.jpg') }}" style="width: 200px; border-radius: 10px;">
-      <img src="{{ url_for('static', filename='fb2.jpg') }}" style="width: 200px; border-radius: 10px;">
-    </div>
+    <a href="https://www.facebook.com/share/r/1G7GJWHP4M/?mibextid=wwXIfr" target="_blank">
+      <img src="{{ url_for('static', filename='fb2.jpg') }}" class="social-image-hover" style="width: 260px; height: 330px; object-fit: cover; border-radius: 10px;">
+    </a>
   </div>
+</div>
+
+
 
   <!-- Instagram -->
   <div>
     <h3 style="font-size: 27px; color: #e1306c;">Instagram</h3>
     <p>Catch glimpses of our events and behind-the-scenes moments.</p>
-    <a href="https://www.instagram.com/adcs.kent?igsh=MW1xaWlmMnNwbWR5NA==" target="_blank">
-      <img src="{{ url_for('static', filename='follow.jpeg') }}" alt="Follow on Instagram" style="height: 60px; margin: 10px;">
-    </a>
+   <a href="https://www.instagram.com/adcs.kent?igsh=MW1xaWlmMnNwbWR5NA==" target="_blank">
+        <img src="{{ url_for('static', filename='follow.jpeg') }}" alt="Follow on Instagram" class="social-follow-button" style="height: 60px; margin: 10px;">
+   </a>
+
     <div style="display: flex; justify-content: center; flex-wrap: wrap; gap: 15px; margin-top: 15px;">
         <a href="https://www.instagram.com/adcs.kent/reel/C4EPRNlL3g6/" target="_blank">
-      <img src="{{ url_for('static', filename='ig1.jpg') }}" style="width: 200px; border-radius: 10px;">
+      <img src="{{ url_for('static', filename='ig1.jpg') }}" class="social-image-hover" style="width: 200px; border-radius: 10px;">
         </a>
         <a href="https://www.instagram.com/adcs.kent/reel/DAox-Fqo5fU/" target="_blank">
-      <img src="{{ url_for('static', filename='ig2.jpg') }}" style="width: 200px; border-radius: 10px;">
+      <img src="{{ url_for('static', filename='ig2.jpg') }}" class="social-image-hover" style="width: 200px; border-radius: 10px;">
         </a>
     </div>
   </div>
